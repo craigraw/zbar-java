@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println("Hello world!");
 
-        BufferedImage bufferedImage = ImageIO.read(new File("/Users/scy/git/zbar-java/screenshot.png"));
+        BufferedImage bufferedImage = ImageIO.read(new File("screenshot.png"));
 
         if(ZBar.isEnabled()) {
             long start = System.currentTimeMillis();
