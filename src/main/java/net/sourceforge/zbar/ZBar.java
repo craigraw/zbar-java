@@ -99,10 +99,8 @@ public class ZBar {
                 NativeUtils.loadLibraryFromJar("/native/windows/x64/libzbarjni-0.dll");
             } else if(osArch.equals("aarch64")) {
                 NativeUtils.loadLibraryFromJar("/native/linux/aarch64/libzbar.so");
-                NativeUtils.loadLibraryFromJar("/native/linux/aarch64/libzbarjni.so");
             } else {
                 NativeUtils.loadLibraryFromJar("/native/linux/x64/libzbar.so");
-                NativeUtils.loadLibraryFromJar("/native/linux/x64/libzbarjni.so");
             }
 
             return true;
