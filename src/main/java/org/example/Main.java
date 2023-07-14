@@ -30,5 +30,16 @@ public class Main {
                 System.out.println(scan.stringData());
             }
         }
+
+        BufferedImage multiImage = ImageIO.read(new File("multi.png"));
+        if(ZBar.isEnabled()) {
+            long start = System.currentTimeMillis();
+            ZBar.Scan scan = ZBar.scan(multiImage);
+            System.out.println(System.currentTimeMillis() - start);
+            if(scan != null) {
+                System.out.println(scan.stringData());
+            }
+        }
+
     }
 }

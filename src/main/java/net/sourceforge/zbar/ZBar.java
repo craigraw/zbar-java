@@ -92,7 +92,6 @@ public class ZBar {
             String osArch = System.getProperty("os.arch");
             if(osName.startsWith("Mac") && osArch.equals("aarch64")) {
                 NativeUtils.loadLibraryFromJar("/native/osx/aarch64/libzbar.dylib");
-                NativeUtils.loadLibraryFromJar("/native/osx/aarch64/libzbarjni.dylib");
             } else if(osName.startsWith("Mac")) {
                 NativeUtils.loadLibraryFromJar("/native/osx/x64/libzbar.dylib");
                 NativeUtils.loadLibraryFromJar("/native/osx/x64/libzbarjni.dylib");
