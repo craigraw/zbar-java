@@ -95,8 +95,8 @@ public class ZBar {
             } else if(osName.startsWith("Mac")) {
                 NativeUtils.loadLibraryFromJar("/native/osx/x64/libzbar.dylib");
             } else if(osName.startsWith("Windows")) {
-                NativeUtils.loadLibraryFromJar("/native/windows/x64/libzbar-0.dll");
-                NativeUtils.loadLibraryFromJar("/native/windows/x64/libzbarjni-0.dll");
+                NativeUtils.loadLibraryFromJar("/native/windows/x64/iconv-2.dll");
+                NativeUtils.loadLibraryFromJar("/native/windows/x64/zbar.dll");
             } else if(osArch.equals("aarch64")) {
                 NativeUtils.loadLibraryFromJar("/native/linux/aarch64/libzbar.so");
             } else {
