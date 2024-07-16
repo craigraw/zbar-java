@@ -41,5 +41,34 @@ public class Main {
             }
         }
 
+        BufferedImage scannedImage = ImageIO.read(new File("image28-sharpened.png"));
+        if(ZBar.isEnabled()) {
+            long start = System.currentTimeMillis();
+            ZBar.Scan scan = ZBar.scan(scannedImage);
+            System.out.println(System.currentTimeMillis() - start);
+            if(scan != null) {
+                System.out.println(scan.stringData());
+            }
+        }
+
+        BufferedImage cveImage = ImageIO.read(new File("cve-test.png"));
+        if(ZBar.isEnabled()) {
+            long start = System.currentTimeMillis();
+            ZBar.Scan scan = ZBar.scan(cveImage);
+            System.out.println(System.currentTimeMillis() - start);
+            if(scan != null) {
+                System.out.println(scan.stringData());
+            }
+        }
+
+//        BufferedImage invertedImage = ImageIO.read(new File("crash.png"));
+//        if(ZBar.isEnabled()) {
+//            long start = System.currentTimeMillis();
+//            ZBar.Scan scan = ZBar.scan(invertedImage);
+//            System.out.println(System.currentTimeMillis() - start);
+//            if(scan != null) {
+//                System.out.println(scan.stringData());
+//            }
+//        }
     }
 }
